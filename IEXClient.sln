@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEXClient.ConsoleTest", "IE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{19E93206-ED77-42AD-8E84-E2F0E91A7F1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockData.Domain", "..\StockData\StockData.Domain\StockData.Domain.csproj", "{EA355EAA-803E-4631-8F8F-8DC243F7F2DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{19E93206-ED77-42AD-8E84-E2F0E91A7F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19E93206-ED77-42AD-8E84-E2F0E91A7F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19E93206-ED77-42AD-8E84-E2F0E91A7F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA355EAA-803E-4631-8F8F-8DC243F7F2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA355EAA-803E-4631-8F8F-8DC243F7F2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA355EAA-803E-4631-8F8F-8DC243F7F2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA355EAA-803E-4631-8F8F-8DC243F7F2DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

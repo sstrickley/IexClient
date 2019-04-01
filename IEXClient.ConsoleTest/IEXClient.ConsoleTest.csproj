@@ -53,6 +53,10 @@
       <Project>{19e93206-ed77-42ad-8e84-e2f0e91a7f1b}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\StockData\StockData.Domain\StockData.Domain.csproj">
+      <Project>{ea355eaa-803e-4631-8f8f-8dc243f7f2da}</Project>
+      <Name>StockData.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IEXClient\IEXClient.csproj">
       <Project>{7fa99a36-be5c-431a-bb4e-c91a09c5d369}</Project>
       <Name>IEXClient</Name>

@@ -1,12 +1,11 @@
-﻿using Common.Extensions;
-using IEXClient.Chart;
+﻿using IEXClient.Chart;
 using IEXClient.Dividends;
 using IEXClient.KeyStats;
+using IEXClient.Quote;
+using StockData.Domain.CommonEnum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IEXClient.ConsoleTest
 {
@@ -19,7 +18,9 @@ namespace IEXClient.ConsoleTest
             //TestStatsRequest();
             //TestStatsMultiSymbolRequest();
             //TestDividendRequest();
-            TestDividendMultiRequest();
+            //TestDividendMultiRequest();
+            //TestQuoteRequest();
+            TestQuoteMultiRequest();
 
             Console.ReadLine();
         }
@@ -78,6 +79,24 @@ namespace IEXClient.ConsoleTest
             var response = dividendRequest.SendRequestAsync().GetAwaiter().GetResult();
 
             Console.WriteLine("Data Count: {0}", response.Count);
+        }
+
+        static void TestQuoteRequest()
+        {
+            var quoteRequest = new QuoteRequest("AAPL");
+            var response = quoteRequest.SendRequestAsync().GetAwaiter().GetResult();
+
+            Console.WriteLine("Quote received");
+        }
+
+        static void TestQuoteMultiRequest()
+        {
+            var symbols = new List<string> { "AAPL", "FB", "ON", "NVCR", "CGC" };
+
+            var quoteRequest = new QuoteMultiRequst(symbols);
+            var response = quoteRequest.SendRequestAsync().GetAwaiter().GetResult();
+
+            Console.WriteLine("Quotes received");
         }
     }
 }
