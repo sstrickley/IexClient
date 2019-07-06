@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace IEXClient.Quote
 {
-    public class QuoteMultiRequst : BaseRequest<Dictionary<string, RequestTypes>>
+    public class QuoteMultiRequest : BaseRequest<Dictionary<string, RequestTypes>>
     {
-        public QuoteMultiRequst(IEnumerable<string> symbols)
+        public QuoteMultiRequest(IEnumerable<string> symbols)
         {
             SetEndpoint("stock", "market", "batch");
             Parameters.Add("symbols", string.Join(",", symbols));

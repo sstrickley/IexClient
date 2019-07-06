@@ -22,10 +22,10 @@ namespace IEXClient.Common
 
         public async Task Throttle()
         {
-            var secPerReq = 60 / REQUEST_PER_MINUTE_LIMIT;
-            var secSinceLast = (double)(DateTime.Now - _lastRequest).Seconds;
+            var msecPerReq = 60 / REQUEST_PER_MINUTE_LIMIT * 1000;
+            var msecSinceLast = (DateTime.Now - _lastRequest).TotalMilliseconds;
 
-            var diff = secPerReq - secSinceLast;
+            var diff = msecPerReq - msecSinceLast;
 
             if (diff > 0)
                 await Task.Delay((int)diff);
